@@ -4,7 +4,7 @@
 # Using the name variable with the URL in line 13 is convenient
 # when copying and pasting from another recipe, but not really needed.
 {% set name = "vega-cli" %}
-{% set version = "5.3.5" %}
+{% set version = "5.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -22,7 +22,7 @@ requirements:
 
 test:
   commands:
-    - curl https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json > test.json
+    - curl -L https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json > test.json
     - vg2pdf test.json > test.pdf
 
 about:
