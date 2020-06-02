@@ -1,10 +1,5 @@
-# Note: there are many handy hints in comments in this example -- remove them when you've finalized your recipe
-
-# Jinja variables help maintain the recipe as you'll update the version only here.
-# Using the name variable with the URL in line 13 is convenient
-# when copying and pasting from another recipe, but not really needed.
 {% set name = "vega-cli" %}
-{% set version = "5.6.0" %}
+{% set version = "5.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -12,11 +7,12 @@ package:
 
 build:
   number: 0
-  skip: true  # [win]
+  script: npm add -g vega-cli@{{ version }}; cp $PREFIX/lib/node_modules/vega-cli/LICENSE $SRC_DIR  # [not win]
+  script: npm add -g vega-cli@{{ version }}; COPY %PREFIX%\node_modules\vega-cli\LICENSE %SRC_DIR%  # [win]
 
 requirements:
   build:
-    - yarn
+    - nodejs
   run:
     - nodejs
 
