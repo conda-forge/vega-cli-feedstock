@@ -9,7 +9,7 @@ build:
   skip: true  # [osx]
   number: 0
   script: $PREFIX/bin/npm install -g vega-cli@{{ version }} && cp $PREFIX/lib/node_modules/vega-cli/LICENSE $SRC_DIR  # [linux]
-  script: npm install -g vega-cli@{{ version }} && PING 172.0.0.1 -n 6 > NUL && COPY %PREFIX%\node_modules\vega-cli\LICENSE %SRC_DIR%  # [win]
+  script: npm install -g vega-cli@{{ version }} && COPY %PREFIX%\node_modules\vega-cli\LICENSE %SRC_DIR%  # [win]
 
 requirements:
   build:
@@ -18,8 +18,9 @@ requirements:
     - nodejs
 
 test:
+  files:
+    - test.json
   commands:
-    - curl -L https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json > test.json
     - vg2pdf test.json > test.pdf
 
 about:
