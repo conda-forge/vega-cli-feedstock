@@ -7,8 +7,8 @@ package:
 
 build:
   number: 0
-  script: npm add -g vega-cli@{{ version }}; cp $PREFIX/lib/node_modules/vega-cli/LICENSE $SRC_DIR  # [not win]
-  script: npm add -g vega-cli@{{ version }}; COPY %PREFIX%\node_modules\vega-cli\LICENSE %SRC_DIR%  # [win]
+  script: $PREFIX/bin/npm install -g vega-cli@{{ version }} && cp $PREFIX/lib/node_modules/vega-cli/LICENSE $SRC_DIR  # [linux]
+  script: npm install -g vega-cli@{{ version }} && TIMEOUT 5 > NULL && COPY %PREFIX%\node_modules\vega-cli\LICENSE %SRC_DIR%  # [win]
 
 requirements:
   build:
