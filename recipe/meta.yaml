@@ -6,9 +6,10 @@ package:
   version: {{ version }}
 
 build:
+  skip: true  # [osx]
   number: 0
   script: $PREFIX/bin/npm install -g vega-cli@{{ version }} && cp $PREFIX/lib/node_modules/vega-cli/LICENSE $SRC_DIR  # [linux]
-  script: npm install -g vega-cli@{{ version }} && TIMEOUT 5 > NULL && COPY %PREFIX%\node_modules\vega-cli\LICENSE %SRC_DIR%  # [win]
+  script: npm install -g vega-cli@{{ version }} && PING 172.0.0.1 -n 6 > NUL && COPY %PREFIX%\node_modules\vega-cli\LICENSE %SRC_DIR%  # [win]
 
 requirements:
   build:
