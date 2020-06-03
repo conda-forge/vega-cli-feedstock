@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 build:
-  skip: true  # [osx]
+  skip: true  # [not linux]
   number: 0
   script: $PREFIX/bin/npm install -g vega-cli@{{ version }} && cp $PREFIX/lib/node_modules/vega-cli/LICENSE $SRC_DIR  # [linux]
   script: '%PREFIX%\npm install -g --loglevel verbose vega-cli@{{ version }} && DIR %PREFIX%\node_modules\vega-cli && COPY %PREFIX%\node_modules\vega-cli\LICENSE %SRC_DIR%'  # [win]
