@@ -1,6 +1,6 @@
 {% set name = "vega-cli" %}
 {% set version = "5.17.0" %}
-{% set sha256 = "f5fa1f605ed03598ad1413bc86f45f63d1652ef9f3c2c130180a45a36a9d8f10" %}
+{% set sha256 = "38aadfe34a45f4065cafb2eef9232d69331a331f2847af2293ef682580147478" %}
 
 package:
   name: {{ name|lower }}
