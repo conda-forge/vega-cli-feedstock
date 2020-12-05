@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   noarch: generic
-  script: npm install -g vega-cli@{{version}}
+  script: npm install -g vega-cli@{{ version }}
 
 requirements:
   build:
