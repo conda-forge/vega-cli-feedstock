@@ -7,7 +7,6 @@ package:
 
 build:
   number: 0
-  skip: true  # [win]
 
 requirements:
   build:
@@ -16,18 +15,18 @@ requirements:
     - python *
     - pkg-config
   host:
-    - cairo
-    - freetype
-    - giflib
-    - glib
-    - jpeg
-    - libpng
-    - nodejs
-    - pango
-    - yarn
+    - nodejs 14.*
+    - cairo     # [not win]
+    - freetype  # [not win]
+    - giflib    # [not win]
+    - glib      # [not win]
+    - jpeg      # [not win]
+    - libpng    # [not win]
+    - pango     # [not win]
+    - yarn      # [not win]
   run:
-    - nodejs
-    - pango
+    - nodejs 14.*
+    - pango  # [not win]
 
 test:
   commands:
