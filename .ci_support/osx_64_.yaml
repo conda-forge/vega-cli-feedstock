@@ -19,7 +19,7 @@ freetype:
 giflib:
 - '5.2'
 glib:
-- '2.58'
+- 2.64.6
 jpeg:
 - '9'
 libpng:
