@@ -1,10 +1,5 @@
-# Note: there are many handy hints in comments in this example -- remove them when you've finalized your recipe
-
-# Jinja variables help maintain the recipe as you'll update the version only here.
-# Using the name variable with the URL in line 13 is convenient
-# when copying and pasting from another recipe, but not really needed.
 {% set name = "vega-cli" %}
-{% set version = "5.6.0" %}
+{% set version = "5.17.0" %}
 
 package:
   name: {{ name|lower }}
@@ -12,13 +7,26 @@ package:
 
 build:
   number: 0
-  skip: true  # [win]
 
 requirements:
   build:
-    - yarn
+    - "{{ compiler('c') }}"
+    - "{{ compiler('cxx') }}"
+    - python *
+    - pkg-config
+  host:
+    - nodejs 14.*
+    - cairo     # [not win]
+    - freetype  # [not win]
+    - giflib    # [not win]
+    - glib      # [not win]
+    - jpeg      # [not win]
+    - libpng    # [not win]
+    - pango     # [not win]
+    - yarn      # [not win]
   run:
-    - nodejs
+    - nodejs 14.*
+    - pango  # [not win]
 
 test:
   commands:
@@ -41,3 +49,4 @@ about:
 extra:
   recipe-maintainers:
     - johanneskoester
+    - xhochy

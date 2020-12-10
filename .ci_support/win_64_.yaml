@@ -1,8 +1,10 @@
-build_number_decrement:
-- '0'
+c_compiler:
+- vs2017
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
-docker_image:
-- condaforge/linux-anvil-comp7
+cxx_compiler:
+- vs2017
+target_platform:
+- win-64
