@@ -15,7 +15,8 @@ requirements:
     - python *
     - pkg-config
   host:
-    - nodejs 14.*
+    - nodejs 14.*  # [win]
+    - nodejs    # [not win]
     - cairo     # [not win]
     - freetype  # [not win]
     - giflib    # [not win]
@@ -25,7 +26,7 @@ requirements:
     - pango     # [not win]
     - yarn      # [not win]
   run:
-    - nodejs 14.*
+    - nodejs 14.*  # [win]
     - pango  # [not win]
 
 test:
