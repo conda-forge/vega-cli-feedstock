@@ -21,7 +21,7 @@ freetype:
 giflib:
 - '5.2'
 glib:
-- 2.64.6
+- '2'
 jpeg:
 - '9'
 libpng:
@@ -44,3 +44,5 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
+- - cdt_name
+  - docker_image
