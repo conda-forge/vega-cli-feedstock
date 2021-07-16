@@ -27,7 +27,7 @@ jpeg:
 libpng:
 - '1.6'
 nodejs:
-- '12'
+- '16'
 pango:
 - '1.48'
 pin_run_as_build:
