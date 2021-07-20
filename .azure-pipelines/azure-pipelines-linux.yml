@@ -5,7 +5,7 @@
 jobs:
 - job: linux
   pool:
-    vmImage: ubuntu-16.04
+    vmImage: ubuntu-latest
   strategy:
     matrix:
       linux_64_nodejs12:
@@ -16,8 +16,8 @@ jobs:
         CONFIG: linux_64_nodejs14
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-cuda:10.2
-      linux_64_nodejs15:
-        CONFIG: linux_64_nodejs15
+      linux_64_nodejs16:
+        CONFIG: linux_64_nodejs16
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-cuda:10.2
   timeoutInMinutes: 360
