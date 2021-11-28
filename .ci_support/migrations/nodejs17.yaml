@@ -2,8 +2,8 @@ __migrator:
   build_number: 1
   kind: version
   migration_number: 1
-migrator_ts: 1626366230.4925187
+migrator_ts: 1638024739.738037
 nodejs:
- - 16
- - 14
- - 12
+- '17'
+- '16'
+- '14'
