@@ -15,7 +15,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '9'
 docker_image:
-- quay.io/condaforge/linux-anvil-cos7-cuda:10.2
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 freetype:
 - '2'
 giflib:
@@ -29,7 +29,7 @@ libpng:
 nodejs:
 - '17'
 pango:
-- '1.48'
+- '1.50'
 pin_run_as_build:
   cairo:
     max_pin: x.x
@@ -46,5 +46,3 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-- - cdt_name
-  - docker_image
