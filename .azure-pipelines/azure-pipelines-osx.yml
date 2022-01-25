@@ -17,6 +17,12 @@ jobs:
       osx_64_nodejs17:
         CONFIG: osx_64_nodejs17
         UPLOAD_PACKAGES: 'True'
+      osx_arm64_nodejs16:
+        CONFIG: osx_arm64_nodejs16
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_nodejs17:
+        CONFIG: osx_arm64_nodejs17
+        UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 
   steps:
