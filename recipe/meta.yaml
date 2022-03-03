@@ -13,6 +13,8 @@ requirements:
     - "{{ compiler('c') }}"
     - "{{ compiler('cxx') }}"
     - python *
+    - nodejs    # [not win]
+    - make      # [not win]
     - pkg-config
   host:
     - nodejs 14.*  # [win]
