@@ -1,21 +1,19 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '11.0'
 c_compiler:
-- gcc
+- clang
 c_compiler_version:
-- '10'
+- '14'
 cairo:
 - '1'
-cdt_name:
-- cos7
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- gxx
+- clangxx
 cxx_compiler_version:
-- '10'
-docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
+- '14'
 freetype:
 - '2'
 giflib:
@@ -26,12 +24,14 @@ jpeg:
 - '9'
 libpng:
 - '1.6'
+macos_machine:
+- arm64-apple-darwin20.0.0
 nodejs:
 - '14'
 pango:
 - '1.50'
 target_platform:
-- linux-64
+- osx-arm64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
