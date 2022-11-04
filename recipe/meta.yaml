@@ -10,7 +10,7 @@ source:
   sha256: 05cb40b10c8b0e12ff31942ff93e1703c47e1d0f032c2b50209d1cd3ff47d0a1
 
 build:
-  number: 0
+  number: 1
   skip: true  # [nodejs == 14]
 
 requirements:
@@ -22,8 +22,7 @@ requirements:
     - make      # [not win]
     - pkg-config
   host:
-    - nodejs 14.*  # [win]
-    - nodejs    # [not win]
+    - nodejs
     - cairo     # [not win]
     - freetype  # [not win]
     - giflib    # [not win]
@@ -33,7 +32,7 @@ requirements:
     - pango     # [not win]
     - yarn      # [not win]
   run:
-    - nodejs 14.*  # [win]
+    - nodejs
     - pango  # [not win]
 
 test:
