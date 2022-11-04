@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -exuo pipefail
+
 if [[ "${target_platform}" == "osx-arm64" ]]; then
   export npm_config_arch="arm64"
 fi
@@ -26,3 +28,8 @@ do
 done
 
 cp $PREFIX/lib/vega-cli/node_modules/vega-cli/LICENSE $SRC_DIR
+
+# Remove faulty files
+if [[ "${nodejs}" == "18" ]]; then
+  find ${PREFIX} -name node_gyp_bins | xargs rm -r
+fi
