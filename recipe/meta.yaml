@@ -1,5 +1,5 @@
 {% set name = "vega-cli" %}
-{% set version = "5.22.1" %}
+{% set version = "5.23.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,16 +7,16 @@ package:
 
 source:
   url: https://github.com/vega/vega/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 05cb40b10c8b0e12ff31942ff93e1703c47e1d0f032c2b50209d1cd3ff47d0a1
+  sha256: 4970e46a642e050188f7f3f7d35815a0b8a84618f96c867261af2c5153abc720
 
 build:
-  number: 1
+  number: 0
   skip: true  # [nodejs == 14]
 
 requirements:
   build:
-    - "{{ compiler('c') }}"
-    - "{{ compiler('cxx') }}"
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - python *
     - nodejs    # [not win]
     - make      # [not win]
@@ -45,7 +45,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Command line interface of the VEGA visualization grammar'
+  summary: Command line interface of the VEGA visualization grammar
   description: |
     The vega-cli package includes three node.js-based command line utilities -
     vg2pdf, vg2png, and vg2svg - for rendering static visualization images.
