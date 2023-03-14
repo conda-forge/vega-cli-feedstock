@@ -1,11 +1,11 @@
-About vega-cli
-==============
+About vega-cli-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vega-cli-feedstock/blob/main/LICENSE.txt)
 
 Home: https://vega.github.io
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vega-cli-feedstock/blob/main/LICENSE.txt)
 
 Summary: Command line interface of the VEGA visualization grammar
 

@@ -10,7 +10,7 @@ source:
   sha256: 05cb40b10c8b0e12ff31942ff93e1703c47e1d0f032c2b50209d1cd3ff47d0a1
 
 build:
-  number: 1
+  number: 2
   skip: true  # [nodejs == 14]
 
 requirements:
@@ -27,10 +27,10 @@ requirements:
     - freetype  # [not win]
     - giflib    # [not win]
     - glib      # [not win]
-    - jpeg      # [not win]
+    - libjpeg-turbo       # [not win]
     - libpng    # [not win]
     - pango     # [not win]
-    - yarn      # [not win]
+    - yarn <2   # [not win]
   run:
     - nodejs
     - pango  # [not win]
