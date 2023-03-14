@@ -22,8 +22,8 @@ giflib:
 - '5.2'
 glib:
 - '2'
-jpeg:
-- '9'
+libjpeg_turbo:
+- 2.1.5
 libpng:
 - '1.6'
 nodejs:
