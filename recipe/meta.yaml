@@ -30,7 +30,7 @@ requirements:
     - libjpeg-turbo       # [not win]
     - libpng    # [not win]
     - pango     # [not win]
-    - yarn      # [not win]
+    - yarn <2   # [not win]
   run:
     - nodejs
     - pango  # [not win]
