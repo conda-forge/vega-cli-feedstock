@@ -7,6 +7,6 @@ channel_targets:
 cxx_compiler:
 - vs2019
 nodejs:
-- '16'
+- '20'
 target_platform:
 - win-64

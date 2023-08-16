@@ -27,7 +27,7 @@ libjpeg_turbo:
 libpng:
 - '1.6'
 nodejs:
-- '16'
+- '20'
 pango:
 - '1.50'
 target_platform:
