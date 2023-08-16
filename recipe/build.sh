@@ -30,6 +30,4 @@ done
 cp $PREFIX/lib/vega-cli/node_modules/vega-cli/LICENSE $SRC_DIR
 
 # Remove faulty files
-if [[ "${nodejs}" == "18" ]]; then
-  find ${PREFIX} -name node_gyp_bins | xargs rm -r
-fi
+find ${PREFIX} -name node_gyp_bins | xargs rm -r
