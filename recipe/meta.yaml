@@ -10,7 +10,7 @@ source:
   sha256: 893f70ffc8f506a0a87a7e490062dd3639eaf1ed8f26e33e1b75fe0729d4e43e
 
 build:
-  number: 0
+  number: 1
   skip: true  # [nodejs == 14]
 
 requirements:
