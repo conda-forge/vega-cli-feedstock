@@ -30,4 +30,8 @@ done
 cp $PREFIX/lib/vega-cli/node_modules/vega-cli/LICENSE $SRC_DIR
 
 # Remove faulty files
-find ${PREFIX} -name node_gyp_bins | xargs rm -r
+if [[ "${target_platform}" == linux-* ]]; then
+    find ${PREFIX} -name node_gyp_bins | xargs --no-run-if-empty rm -r
+else
+    find ${PREFIX} -name node_gyp_bins | xargs rm -r
+fi
