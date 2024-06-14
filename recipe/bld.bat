@@ -1,4 +1,15 @@
 @echo on
+cmd /c "npm install --GTK_Root=%LIBRARY_PREFIX% canvas"
+if errorlevel 1 exit 1
+
+cmd /c "npm install"
+if errorlevel 1 exit 1
+
+pushd packages\vega-cli
+
+cmd /c "npm pack"
+if errorlevel 1 exit 1
+
 md %LIBRARY_PREFIX%\share\vega-cli
 pushd %LIBRARY_PREFIX%\share\vega-cli
 
