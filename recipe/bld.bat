@@ -14,7 +14,7 @@ md node_modules
 cmd /c "npm install --GTK_Root=%LIBRARY_PREFIX% canvas"
 if errorlevel 1 exit 1
 
-cmd /c "npm install --save vega-cli@%PKG_VERSION%"
+cmd /c "npm install --save %SRC_DIR$\%packages\vega-cli\vega-cli-*"
 if errorlevel 1 exit 1
 
 pushd %LIBRARY_PREFIX%\bin
