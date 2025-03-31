@@ -26,6 +26,7 @@ requirements:
   host:
     - nodejs
     - cairo     # [not win]
+    - expat     # [not win]
     - freetype  # [not win]
     - giflib    # [not win]
     - glib      # [not win]
