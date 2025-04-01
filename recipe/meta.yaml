@@ -1,5 +1,5 @@
 {% set name = "vega-cli" %}
-{% set version = "5.30.0" %}
+{% set version = "6.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/vega/vega/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 52e02ce1fea1c10e8e78798ecaa7af545de5f7ad413bbc0146df0e86d4cc4073
+  sha256: d4bfea31b7adb851cc0eeea38c5c226a04ecf725fa0f136a8fa4bc7a405ac997
 
 build:
   number: 0
@@ -26,12 +26,14 @@ requirements:
   host:
     - nodejs
     - cairo     # [not win]
+    - expat     # [not win]
     - freetype  # [not win]
     - giflib    # [not win]
     - glib      # [not win]
     - libjpeg-turbo       # [not win]
     - libpng    # [not win]
     - pango     # [not win]
+    - xorg-xorgproto  # [linux]
     - yarn <2   # [not win]
   run:
     - nodejs
