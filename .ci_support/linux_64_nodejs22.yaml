@@ -20,6 +20,8 @@ cxx_compiler_version:
 - '13'
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:cos7
+expat:
+- '2'
 freetype:
 - '2'
 giflib:

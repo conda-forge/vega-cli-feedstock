@@ -1,5 +1,5 @@
 {% set name = "vega-cli" %}
-{% set version = "6.0.0" %}
+{% set version = "6.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/vega/vega/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d4bfea31b7adb851cc0eeea38c5c226a04ecf725fa0f136a8fa4bc7a405ac997
+  sha256: 5d0e668046787ab064e7edc3614d493afcfaab0b417c55ae1e7066ae470fa1a2
 
 build:
   number: 0
