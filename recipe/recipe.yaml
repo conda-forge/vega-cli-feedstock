@@ -1,0 +1,78 @@
+schema_version: 1
+
+context:
+  name: vega-cli
+  version: 6.2.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/vega/vega/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: 4e5497039d7b6630d2efaea0a992946f18333965c59fbc5a3b0f9e7a2578ec6a
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
+    - python >=3.7,<3.12
+    - if: not win
+      then: nodejs
+    - if: not win
+      then: make
+    - if: linux
+      then: rsync
+    - pkg-config
+  host:
+    - nodejs
+    - if: not win
+      then: cairo
+    - if: not win
+      then: expat
+    - if: not win
+      then: freetype
+    - if: not win
+      then: giflib
+    - if: not win
+      then: glib
+    - if: not win
+      then: libjpeg-turbo
+    - if: not win
+      then: libpng
+    - if: not win
+      then: pango
+    - if: linux
+      then: xorg-xorgproto
+    - if: not win
+      then: yarn <2
+  run:
+    - nodejs
+    - if: not win
+      then: pango
+
+tests:
+  - script:
+      - curl -L https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json > test.json
+      - vg2pdf test.json > test.pdf
+
+about:
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: Command line interface of the VEGA visualization grammar
+  description: |
+    The vega-cli package includes three node.js-based command line utilities -
+    vg2pdf, vg2png, and vg2svg - for rendering static visualization images.
+    These commands render to PDF, PNG, or SVG files, respectively.
+  homepage: https://vega.github.io
+  repository: https://github.com/vega/vega
+  documentation: https://vega.github.io/vega/usage/#cli
+
+extra:
+  recipe-maintainers:
+    - johanneskoester
+    - xhochy
