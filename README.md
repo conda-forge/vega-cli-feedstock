@@ -3,7 +3,7 @@ About vega-cli-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vega-cli-feedstock/blob/main/LICENSE.txt)
 
-Home: https://vega.github.io
+Home: https://vega.github.io/
 
 Package license: BSD-3-Clause
 
@@ -16,7 +16,6 @@ Documentation: https://vega.github.io/vega/usage/#cli
 The vega-cli package includes three node.js-based command line utilities -
 vg2pdf, vg2png, and vg2svg - for rendering static visualization images.
 These commands render to PDF, PNG, or SVG files, respectively.
-
 
 Current build status
 ====================
