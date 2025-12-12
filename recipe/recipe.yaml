@@ -31,25 +31,19 @@ requirements:
   host:
     - nodejs
     - if: not win
-      then: cairo
-    - if: not win
-      then: expat
-    - if: not win
-      then: freetype
-    - if: not win
-      then: giflib
-    - if: not win
-      then: glib
-    - if: not win
-      then: libjpeg-turbo
-    - if: not win
-      then: libpng
-    - if: not win
-      then: pango
+      then:
+        - cairo
+        - expat
+        - freetype
+        - giflib
+        - glib
+        - libjpeg-turbo
+        - libpng
+        - pango
+        - yarn <2
+        - zlib
     - if: linux
       then: xorg-xorgproto
-    - if: not win
-      then: yarn <2
   run:
     - nodejs
     - if: not win
