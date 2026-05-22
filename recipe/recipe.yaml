@@ -13,7 +13,7 @@ source:
   sha256: 4e5497039d7b6630d2efaea0a992946f18333965c59fbc5a3b0f9e7a2578ec6a
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -22,9 +22,9 @@ requirements:
     - ${{ compiler('cxx') }}
     - python >=3.7,<3.12
     - if: not win
-      then: nodejs
-    - if: not win
-      then: make
+      then:
+        - nodejs
+        - make
     - if: linux
       then: rsync
     - pkg-config
