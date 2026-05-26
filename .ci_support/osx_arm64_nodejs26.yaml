@@ -35,7 +35,7 @@ libpng:
 macos_machine:
 - arm64-apple-darwin20.0.0
 nodejs:
-- '22'
+- '26'
 pango:
 - '1'
 target_platform:
