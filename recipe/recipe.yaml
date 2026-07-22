@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: vega-cli
-  version: "6.3.0"
+  version: "6.3.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/vega/vega/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 661599a64896d40a00c42ddec08cec5e9a7177029c92661fe11fdb6a591007a1
+  sha256: fc7e64a49bfa6ee1286d6cce0ed5bc816fb2d10fedf664bf2f1e1e619e4f2921
 
 build:
   number: 0
