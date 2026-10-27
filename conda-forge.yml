@@ -1,7 +1,5 @@
 bot:
   automerge: true
-build_platform:
-  osx_arm64: osx_64
 conda_build:
   pkg_format: '2'
 conda_build_tool: rattler-build
@@ -11,3 +9,5 @@ github:
   branch_name: main
   tooling_branch_name: main
 test: native_and_emulated
+provider:
+  osx_arm64: default
