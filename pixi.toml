@@ -5,11 +5,11 @@
 
 [workspace]
 name = "vega-cli-feedstock"
-version = "2026.9.23"  # conda-smithy version used to generate this file
+version = "2026.10.24"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/vega-cli-feedstock"
 authors = ["@conda-forge/vega-cli"]
 channels = ["conda-forge"]
-platforms = ["linux-64", "osx-64", "win-64"]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
 requires-pixi = ">=0.59.0"
 
 [tasks.build-locally]
